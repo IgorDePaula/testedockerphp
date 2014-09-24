@@ -1,9 +1,13 @@
-{
-  "name": "docker-ubuntu-hello",
-  "private": true,
-  "version": "0.0.1",
-  "description": "Node.js Hello world app on CentOS using docker",
-  "dependencies": {
-    "express": "3.2.4"
-  }
-}
+var express = require('express');
+
+// Constants
+var PORT = 8080;
+
+// App
+var app = express();
+app.get('/', function (req, res) {
+  res.send('Hello world\n');
+});
+
+app.listen(PORT);
+console.log('Running on http://localhost:' + PORT);
