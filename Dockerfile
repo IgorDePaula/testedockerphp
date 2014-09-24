@@ -8,8 +8,7 @@ RUN git clone http://github.com/igordepaula/teste-docker.git
 
 EXPOSE 8080
 
-RUN cd teste-docker
+RUN cd teste-docker; npm install
 
-RUN npm install
 
 CMD ['node','app.js']
