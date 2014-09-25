@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+MAINTAINER Igor de paula <igordepaula@adminweb.com.br>
 
 RUN apt-get update
 RUN apt-get install -y git git-core
@@ -11,4 +12,4 @@ EXPOSE 8080
 RUN cd teste-docker; npm install
 
 
-CMD ['node','app.js']
+RUN cd teste-docker; node app.js
