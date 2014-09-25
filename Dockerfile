@@ -7,7 +7,7 @@ RUN apt-get install -y nodejs nodejs-legacy npm
 
 RUN git clone http://github.com/igordepaula/teste-docker.git
 
-EXPOSE 8080
+EXPOSE 80
 
 RUN cd teste-docker; npm install
 
